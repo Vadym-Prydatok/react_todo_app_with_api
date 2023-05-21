@@ -1,0 +1,22 @@
+.filter {
+  display: flex;
+
+  &__link {
+    margin: 3px;
+    padding: 6px 7px;
+
+    color: inherit;
+    font-size: 14px;
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    &:hover {
+      border-color: rgba(175, 47, 47, 0.1);
+    }
+
+    &.selected {
+      border-color: rgba(175, 47, 47, 0.2);
+    }
+  }
+}

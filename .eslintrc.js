@@ -1,13 +1,22 @@
 module.exports = {
   extends: [
     '@mate-academy/eslint-config-react-typescript',
-    'plugin:react/recommended',
+    'plugin:cypress/recommended',
   ],
   rules: {
     // React
     'react/prop-types': 0,
     'react/self-closing-comp': 0,
     'react/display-name': 0,
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/label-has-associated-control': ['error', {
+      assert: 'either',
+    }],
+    'max-len': ['error', {
+      ignoreTemplateLiterals: true,
+      ignoreComments: true,
+    }],
+    'no-shadow': 'off',
 
     // JavaScript
     semi: 0,
@@ -26,3 +35,19 @@ module.exports = {
     '@typescript-eslint',
   ],
 };
+
+// plugin:cypress/recommended
+
+// module.exports = {
+//   extends: ['@mate-academy/eslint-config-react-typescript',
+//     'plugin:cypress/recommended'],
+//   rules: {
+//     'max-len': ['error', {
+//       ignoreTemplateLiterals: true,
+//       ignoreComments: true,
+//     }],
+//     'jsx-a11y/label-has-associated-control': ['error', {
+//       assert: 'either',
+//     }],
+//   },
+// };
